@@ -1,0 +1,16 @@
+<svg width="1024" height="1024" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="512" height="512" fill="black"/>
+  <!-- Sun -->
+  <circle cx="256" cy="256" r="60" fill="yellow"/>
+  <!-- Orbits -->
+  <circle cx="256" cy="256" r="100" fill="none" stroke="white" stroke-width="4"/>
+  <circle cx="256" cy="256" r="160" fill="none" stroke="white" stroke-width="4"/>
+  <circle cx="256" cy="256" r="220" fill="none" stroke="white" stroke-width="4"/>
+  <circle cx="256" cy="256" r="280" fill="none" stroke="white" stroke-width="4"/>
+  <!-- Planets -->
+  <circle cx="356" cy="256" r="10" fill="blue"/>  <!-- Planet on first orbit -->
+  <circle cx="256" cy="96" r="14" fill="red"/>   <!-- Planet on second orbit -->
+  <circle cx="476" cy="256" r="12" fill="green"/> <!-- Planet on third orbit -->
+  <circle cx="256" cy="476" r="8" fill="orange"/> <!-- Planet on fourth orbit -->
+</svg>
