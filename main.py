@@ -28,16 +28,11 @@ class SolarSystemApp:
 
         self.ani = FuncAnimation(self.fig, self.update, frames=None, init_func=self.init,
                                  fargs=(self.solar_system, self.orbit_lines, self.current_position_markers, self.trajectories),
-                                 interval=0.0000005, blit=True)
+                                 interval=0.000000005, blit=True)
 
     def setup_plot(self):
         fig = plt.figure()
         self.ax = fig.add_subplot(111, projection='3d')
-
-        initial_zoom_level = 10  
-        self.ax.set_xlim([-5e11, 5e11])
-        self.ax.set_ylim([-5e11, 5e11])
-        self.ax.set_zlim([-5e11, 5e11])
 
         self.max_xlim = [-5e12, 5e12]
         self.max_ylim = [-5e12, 5e12]
@@ -55,7 +50,7 @@ class SolarSystemApp:
         self.ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f'{val:.0e}'))
         self.ax.zaxis.set_major_formatter(plt.FuncFormatter(lambda val, pos: f'{val:.0e}'))
 
-        self.body_names = ["Sun", "Earth", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
+        self.body_names = ["Earth", "Sun", "Moon", "Mercury", "Venus", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"]
         colors = ['yellow', 'blue', 'lightgray', 'darkgray', 'magenta', 'red', 'orange', 'goldenrod', 'cyan', 'purple']
 
         self.orbit_lines = [self.ax.plot([], [], [], color=colors[i], linewidth=1.5)[0] for i in range(len(self.solar_system.bodies))]
@@ -129,11 +124,6 @@ class SolarSystemApp:
         self.ax.set_ylim([y / zoom_level for y in self.max_ylim])
         self.ax.set_zlim([z / zoom_level for z in self.max_zlim])
         self.canvas.draw_idle()
-
-    def on_closing(self):
-        self.root.quit()
-        self.root.destroy()
-        sys.exit()
 
 if __name__ == "__main__":
     root = tk.Tk()
