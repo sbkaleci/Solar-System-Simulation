@@ -2,6 +2,8 @@
 
 This is a Python application that simulates the motion of celestial bodies in our solar system. It uses the Astropy library to fetch the initial coordinates and velocities of the planets, the Sun, and the Moon, and then integrates their equations of motion using the SciPy library, and then shows the motions through matplotlib.
 
+![IMAGE](./screenshot.png)
+
 
 ## Features
 
