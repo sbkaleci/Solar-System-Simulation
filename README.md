@@ -19,6 +19,12 @@ This is a Python application that simulates the motion of celestial bodies in ou
 - **Refresh Rate**: Set the interval (in milliseconds) between frame updates. Higher rates make the simulation smoother but use more resources. Refresh Rate can be adjusted by editing main.py file.
 - **Date Display Format**: Customize the date format in the settings menu using standard Python date format strings.
 
+## Sources
+
+* [The Feynman Lectures on Physics, Chapter 9](https://www.feynmanlectures.caltech.edu/I_09.html)
+* [ODEs with solve_ivp](https://jdbburg.com/classes/Sp24Phy5300-JB/notebooks/Reference/ODEs_with_solve_ivp.html)
+
+
 ## Requirements
 - Python 3.x
 - numpy
